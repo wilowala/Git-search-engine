@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="card m-3">
+        <div class="content row">
+            <div class="col-md-6">
+                <div class="p-5">
+                    <img class="rounded w-50" [src]="userInfo.avatar_url">
+                    <h1 class="fs-3 text-light pt-3 pb-3">{{userInfo.login}}</h1>
+                    <h5>Gists: {{userInfo.public_gists |doubleGist}}</h5>
+
+                    <div class="row gx-1 gy-1">
+
+                        <div class="position-relative mt-3 col-md-6">
+                            <span class="badge bg-light text-dark rounded p-2 mt-1">
+                                Following
+                                <!-- <fa-icon class="ms-2" [icon]="faUsers" [ngStyle]="{'color': '#f59840'}"></fa-icon> -->
+                                <span
+                                    class="position-absolute top-0 p-1 mb-2 text-light translate-middle badge rounded-pill"
+                                    [ngStyle]="{'background-color': '#000'}">
+                                    {{userInfo.following}}
+                                </span>
+                            </span>
+                        </div>
+                        <div class="position-relative mt-3 col-md-6">
+                            <span class="badge bg-light text-dark rounded p-2 mt-1">
+                                Followers
+                                <!-- <fa-icon class="ms-2" [icon]="faHeart" [ngStyle]="{'color': '#199bf3'}"></fa-icon> -->
+                                <span
+                                    class="position-absolute top-0 p-1 mb-2 text-light translate-middle badge rounded-pill"
+                                    [ngStyle]="{'background-color': '#000'}">
+                                    {{userInfo.followers}}
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="position-relative mt-3 col-md-6">
+                            <span class="badge bg-light text-dark rounded p-2 mt-1">
+                                Repositories
+                                <!-- <fa-icon class="ms-2" [icon]="faFileCode" [ngStyle]="{'color': '#32c48a'}"></fa-icon> -->
+                                <span
+                                    class="position-absolute top-0 p-1 mb-2 text-light translate-middle badge rounded-pill"
+                                    [ngStyle]="{'background-color': '#000'}">
+                                    {{userInfo.public_repos}}
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="position-relative mt-3 col-md-6">
+                            <button type="button" class="btn btn-light badge bg-light text-dark rounded p-2 mt-1">
+                                <a target="blank" [href]="userInfo.html_url" class="view-btn">View</a>
+                                <!-- <fa-icon class="ms-2" [icon]="faEye"></fa-icon> -->
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row col-md-6 p-5">
+                <p class="float-end fs-3">Repositories</p>
+                <div class="col p-1" *ngFor="let repo of userRepos index as i">
+                    <span class="badge bg-light text-dark rounded p-2">
+                        {{repo.name}}
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
