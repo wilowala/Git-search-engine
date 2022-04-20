@@ -1,0 +1,15 @@
+.card{
+    margin-top:25vh;
+}
+
+hr{
+    margin-top: 20vh;
+}
+
+.footer a{
+ text-decoration: none;
+ cursor: pointer;
+}
+.footer a:hover{
+    color: #f59840;
+}
