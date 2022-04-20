@@ -9,7 +9,8 @@ hr{
 .footer a{
  text-decoration: none;
  cursor: pointer;
+ color: #8b9854 !important;
 }
 .footer a:hover{
-    color: #f59840;
+    color: #caceb7 !important;
 }
