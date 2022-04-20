@@ -1,0 +1,41 @@
+<div class="d-flex  justify-content-between m-5">
+
+    <div class="">
+      <div *ngIf="clicked; then display else hide"></div>
+      <ng-template #hide>
+        <button type="button" class="btn text-dark" [ngStyle]="{'background-color':'#e9eae3'}" (click)="findUserRepos()">
+          View Repos
+        </button>
+      </ng-template>
+  
+      <ng-template #display>
+        <button appHide type="button" class="btn text-dark" [ngStyle]="{'background-color':'#e9eae3'}"
+          (click)="findUserRepos()">
+          View Repos
+        </button>
+      </ng-template>
+    </div>
+   
+    <fa-icon class="times " [icon]="faTimes" (click)="refresh()"></fa-icon>
+  </div>
+  
+  
+  <div class="row height d-flex justify-content-center align-items-center mb-5" *ngIf="complete">
+  
+    <div class="row" >
+      <button type="button" class="btn badge text-light rounded mt-1 col p-1">
+        <span [ngStyle]="{'background-color':'#e9eae3'}" class="badge text-dark rounded p-2">
+          <a target="blank" [href]="repoName.html_url" class="view-btn">{{repoName.name}}</a>
+        </span>
+      </button>
+    </div>
+  </div>
+  
+  
+  <div class="row">
+    <button type="button" class="btn badge text-light rounded mt-1 col p-1" *ngFor="let repo of userRepos index as i">
+      <span [ngStyle]="{'background-color':'#e9eae3'}" class="badge text-dark rounded p-2">
+        <a target="blank" [href]="repo.html_url" class="view-btn">{{repo.name}}</a>
+      </span>
+    </button>
+  </div>
