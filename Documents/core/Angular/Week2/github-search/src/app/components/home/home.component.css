@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.card {
+    width: 100%;
+    background-image:  #e9eae3;
+    border-color: #e9eae3;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.view-btn {
+    text-decoration: none;
+    color: black;
+}
+
+.form {
+    position: relative
+}
+
+.form .fa-search {
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    color: #9ca3af;
+    margin: 5px;
+}
+
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan .i {
+    padding-left: 8px;
+}
+
+.form-input {
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: none
+}
+
+
+.search {
+    position: relative;
+    top: -1vh;
+    background-color: #f59840;
+    border-color: #f59840;
+}
+
+
+.view-btn {
+    text-decoration: none;
+    color: black;
+}
