@@ -13,7 +13,7 @@
 
 ## Description
 
-A simple quote app that a user can generate quotes by filling up the form, and vote for or against various quotes based on merits.
+A MS project aimed at making searches for github users and favorite repositories way easier.
 
 
 ## Installation
